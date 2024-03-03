@@ -22,7 +22,7 @@ public class Example_02 {
         }
     }
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) {
         try {
             // A file with a stream
             InputStream inFile = new FileInputStream("C:/tmp/text.txt");

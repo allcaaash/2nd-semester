@@ -21,7 +21,7 @@ public class Example_03 {
         }
     }
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) {
         String fileName = "C:\\tmp\\text.txt";
         InputStream inFile = null;
 
