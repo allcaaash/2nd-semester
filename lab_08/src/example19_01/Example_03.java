@@ -9,11 +9,12 @@ import java.util.Arrays;
 //созданного файла с использованием буфера в 5 байт.
 
 public class Example_03 {
+    // Считывание по 5 симболов (буфер)
     public static void readAllByArray(InputStream in) throws IOException {
         byte[] buff = new byte[5];
         while (true) {
             int count = in.read(buff);
-            if (count != -1) {
+            if (count != -1) {      // Если не конец файла
                 System.out.println("Count = " + count
                         + ", buff = " + Arrays.toString(buff)
                         + ", str = " + new String(buff, 0, count, "cp1251")); //"UTF8"

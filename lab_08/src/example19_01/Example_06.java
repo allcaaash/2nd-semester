@@ -3,7 +3,7 @@ package example19_01;
 import java.io.*;
 
 public class Example_06 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         Reader in = null;
         Writer out = null;
 
@@ -19,11 +19,14 @@ public class Example_06 {
 
                 System.out.println((char) oneByte);
             }
-
-            in.close();
-            out.close();
         } catch (IOException ex) {
             System.out.println("Error: " + ex);
+        }
+        finally {
+            assert in != null;
+            in.close();
+            assert out != null;
+            out.close();
         }
     }
 }

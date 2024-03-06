@@ -10,10 +10,11 @@ import java.net.URL;
 //файла на диске, интернет-страницы и массива типа byte.
 
 public class Example_02 {
+    // Метод для чтения данных из потока по байтам с выводом
     public static void readAllByByte(InputStream in) throws IOException {
         while (true) {
-            int oneByte = in.read();
-            if (oneByte != -1) {
+            int oneByte = in.read(); // Читает 1 байт
+            if (oneByte != -1) {    // Признак отсутствия конца файла
                 System.out.print((char) oneByte);
             } else {
                 System.out.print("\n" + "end");
@@ -24,19 +25,19 @@ public class Example_02 {
 
     public static void main(String[] args) {
         try {
-            // A file with a stream
+            // С потоком связан файл
             InputStream inFile = new FileInputStream("C:/tmp/text.txt");
             readAllByByte(inFile);
             System.out.print("\n\n\n");
             inFile.close();
 
-            // URL with a stream
+            // С потоком связана веб-страница
             InputStream inURL = new URL("http://google.com").openStream();
             readAllByByte(inURL);
             System.out.print("\n\n\n");
             inURL.close();
 
-            // A byte type array with a stream
+            // С потоком всязан массив типа byte
             InputStream inArray = new ByteArrayInputStream(new byte[] {7, 9, 3, 7, 4});
             readAllByByte(inArray);
             System.out.print("\n\n\n");
