@@ -18,7 +18,7 @@ public class Example_09 {
                 lineCount++;
                 System.out.println(lineCount + ": " + line);
                 bw.write(lineCount + ": " + line);              // Запись без перевода строки
-                bw.newLine();                                       // ПРинудительный переход на новую строку
+                bw.newLine();                                       // Принудительный переход на новую строку
             }
         } catch (IOException ex) {
             System.out.println("Error: " + ex);
