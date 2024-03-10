@@ -1,6 +1,5 @@
 package example19_02;
 
-import javax.annotation.processing.SupportedSourceVersion;
 import java.io.*;
 import java.util.Scanner;
 
